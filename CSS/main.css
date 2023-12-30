@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Montserrat;
+    display: grid;
+    place-items: center;
+    background: hsl(30, 38%, 92%);
+}
+.cadre {
+    display: flex;
+    background: white;
+    height: 28rem;
+    max-width: 37.5rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+.left-side {
+    background-image: url(/images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.right-side {
+    padding: 20px 30px;
+    max-height: 100%;
+    width: 50%;
+    text-align: left;
+}
+.produit {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+}
+h1 {
+    font-family: Fraunces;
+    font-weight: bold;
+    line-height: 1;
+}
+.description {
+    font-size: 0.875em;
+    line-height: 1.65;
+    color: hsl(228, 12%, 48%);
+}
+.prix {
+    display: flex;
+    font-family: Fraunces;
+    font-weight: bold;
+    font-size: 2em;
+    color: hsl(158, 36%, 37%);
+    margin: 25px 0;
+}
+.prix::after {
+    align-self: start;
+    content: '$169.99';
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: small;
+    color: hsl(228, 12%, 48%);
+    padding: 10px 0 0 20px;
+    text-decoration-line: line-through;
+}
+.bouton {
+    background: hsl(158, 36%, 37%);
+    height: 50px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+}
+.bouton:hover {
+    background: #1a4031;
+    cursor: pointer;
+}
+.bouton a {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.bouton a::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 16px;
+    background: url(/images/icon-cart.svg);
+    margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 37.5rem) {
+    .cadre {
+        flex-direction: column;
+        height: 37.5em;
+        width: 21em;
+    }
+    
+    .left-side {
+        height: 40%;
+        background-image: url(/images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    .right-side {
+        padding: 10px 20px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .prix {
+        margin: 20px 0 15px;
+    }
+
+    .bouton {
+        background: hsl(158, 36%, 37%);
+        height: 48px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+    }
+}
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+a {
+    color: #1a4031;
+}
